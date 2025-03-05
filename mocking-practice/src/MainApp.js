@@ -6,7 +6,7 @@ function MainAppComponent() {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        navigate('/info'); // Redireciona para /info
+        navigate('/info');
     }
 
     return (
