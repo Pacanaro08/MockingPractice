@@ -1,18 +1,17 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainAppComponent from './MainApp'; // Certifique-se de que o caminho está correto
+import Info from './info/info'; // Certifique-se de que o caminho está correto
 
 function App() {
-  return (
-    <div className="bg">
-      <div className="container">
-        <div className="square">
-          <h2>Login</h2>
-          <input type="text" name="login" placeholder="Login" className="input" />
-          <input type="text" name="password" placeholder="Password" className="input" />
-          <button className="button">Login</button>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<MainAppComponent />} />
+                <Route path="/info" element={<Info />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
